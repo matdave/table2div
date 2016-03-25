@@ -5,7 +5,8 @@ Convert all tables:
 ```
 $('table').each(function(){
    table2div(this);
-});```
+});
+```
 
 Convert specific table:
 ```
