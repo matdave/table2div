@@ -1,0 +1,104 @@
+/*dynamic tables */
+.table {
+  display: table;
+  /* Defines a Table */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border-bottom: 2px solid #dddddd;
+  color: #6D6D6D;
+  margin: 10px 0 25px;
+  table-layout: fixed;
+  min-width: 100%;
+}
+.table-head {
+  display: table-header-group;
+  width: 100%;
+  /* Defines a table header group */
+}
+.table-head .table-col {
+  /* Column inside the table-head */
+  background: #333333;
+  color: #fff;
+  border-right: 1px solid #5d5d5d;
+  border-bottom: none;
+}
+.table-head .table-col:hover {
+  /* Column hover inside the table-head */
+  background: #222222;
+}
+.table-body {
+  width: 100%;
+  display: table-row-group;
+  /* Defines a table header group */
+}
+.table-row {
+  display: table-row;
+  /* Defines a table row */
+}
+.table-row .table-col:nth-child(1) {
+  /* First column in a row */
+  border-left: 1px solid #eeeeee;
+}
+.table-row:last-child .table-col {
+  /* column in a last row */
+  border-bottom: none;
+}
+.table-col {
+  display: table-cell;
+  /* Defines a table cell */
+  padding: 10px 1em;
+  border-top: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+.table-body .table-row:hover .table-col {
+  background: #f9f9f9;
+}
+/* Responsive table */
+@media all and (max-width: 640px) {
+  .table,
+  .table-row,
+  .table-col,
+  .table-col:before {
+    display: block;
+    /* Converts a table, table row, table column and table column:before into a block element */
+  }
+  .table,
+  .table-row .table-col:last-child {
+    border-bottom: none;
+  }
+  .table-head {
+    display: none;
+  }
+  .table-body {
+    display: block;
+  }
+  .table-row {
+    border: 1px solid #eeeeee;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    margin: 20px 0;
+  }
+  .table-row .table-col:nth-child(1) {
+    /* first column of the row */
+    border-left: none;
+  }
+  .table-row .table-col:last-child {
+    /* last column of the row */
+    border-right: none;
+  }
+  .table-row:last-child .table-col,
+  .table-col {
+    /* Column in the last row and column */
+    border-bottom: 1px solid #eeeeee;
+    text-align: left;
+    padding: 10px 5% 10px;
+  }
+  .table-col:before {
+    /* prints the value of data-label attribute before the column data */
+    font-weight: bold;
+    padding-right: 20px;
+    font-size: 12px;
+    content: " " attr(data-label);
+    /* call the attribute value of data-label and adds a string // */
+  }
+}

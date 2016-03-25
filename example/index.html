@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table2div :: Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/table2div.css">
+</head>
+<body>
+<h1>Table with a header</h1>
+<table border="0">
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Type </td>
+        <td>Amount </td>
+        <td>Loss </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Zucchini</td>
+        <td>Vegetable</td>
+        <td>2 </td>
+        <td>-1</td>
+    </tr>
+    <tr>
+        <td>Carrot </td>
+        <td>Vegetable </td>
+        <td>1 </td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>Apple </td>
+        <td>Fruit </td>
+        <td>4 </td>
+        <td>-2</td>
+    </tr>
+    </tbody>
+</table>
+<h1>Table without a header</h1>
+<table border="0">
+    <tbody>
+    <tr>
+        <td>Zucchini</td>
+        <td>Vegetable</td>
+        <td>2 </td>
+        <td>-1</td>
+    </tr>
+    <tr>
+        <td>Carrot </td>
+        <td>Vegetable </td>
+        <td>1 </td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>Apple </td>
+        <td>Fruit </td>
+        <td>4 </td>
+        <td>-2</td>
+    </tr>
+    </tbody>
+</table>
+<script type="text/javascript" src="../js/table2div.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $('table').each(function(){
+           table2div(this);
+       });
+    });
+</script>
+</body>
+</html>
