@@ -1,14 +1,15 @@
 # table2div
-Javascript based responsive tables
+h2. Javascript based responsive tables
+Example: http://matdave.github.io/table2div/
 
-Convert all tables:
+h3. Convert all tables:
 ```
 $('table').each(function(){
    table2div(this);
 });
 ```
 
-Convert specific table:
+h3. Convert specific table:
 ```
 table2div($('.specific-table'));
 ```
